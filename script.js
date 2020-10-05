@@ -7,18 +7,29 @@ console.dir(currentHour);
 var scheduleItems = []
 
 $(".time-block").on("click", ".saveBtn", function () {
-    var scheduleItem = $(this).closest(".time-block").find(".description").val();
-    console.log(scheduleItem);
+    
+    $(".time-block").each(function() {
+    
+        var scheduleItem = $(".time-block").find(".description").val();
+        console.log(scheduleItem);
 
-    var scheduleTime = $(this).closest(".time-block").attr("id");
-    console.log(scheduleTime);
+        var scheduleTime = $(".time-block").attr("id");
+        console.log(scheduleTime);
 
-    scheduleItems.push({
-        text: scheduleItem,
-        time: scheduleTime
-    })
+        
+
+        scheduleItems.push({
+            text: scheduleItem,
+            time: scheduleTime
+        })
+
+    });
+
+
 
     localStorage.setItem("scheduleItems", JSON.stringify(scheduleItems));
+    
+    
    
 })
 
@@ -58,4 +69,4 @@ $(".time-block").each(function() {
 
 
     
-// loadSchedule();
+loadSchedule();
