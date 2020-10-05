@@ -53,7 +53,9 @@ var loadSchedule = function () {
 $("#currentDay").append(currentDate);
 
 
-setInterval (function() {
+
+var updateTime = function () {
+  
     $(".time-block").each(function() {
         var hour = $(this).closest(".time-block")
         .attr("id")
@@ -70,11 +72,13 @@ setInterval (function() {
             $(this).addClass("present");
         }
     })
+}
 
-})
+updateTime();
 
+setInterval(function () {
+updateTime();
+}, 300000)
 
-
-
-    
+   
 loadSchedule();
