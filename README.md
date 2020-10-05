@@ -27,7 +27,7 @@ https://chriswein12.github.io/work-day-scheduler/
 
 ## How the Website Looks
 
-![image of the website](./images/work-day-scheduler.png)
+![image of the website](./assets/images/work-day-scheduler.png)
 
 <br/>
 
